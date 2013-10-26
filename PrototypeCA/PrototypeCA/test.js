@@ -1,2 +1,2 @@
 // this is a test
-console.log("howdy");
+console.log("test script");

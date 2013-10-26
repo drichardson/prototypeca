@@ -24,6 +24,12 @@
 		91172906181A600C00B1BB2F /* PCAViewerWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91172904181A600C00B1BB2F /* PCAViewerWindowController.xib */; };
 		91172908181A62D800B1BB2F /* test.js in Sources */ = {isa = PBXBuildFile; fileRef = 91172907181A62D800B1BB2F /* test.js */; };
 		91172909181A637500B1BB2F /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 91172907181A62D800B1BB2F /* test.js */; };
+		9117290C181A65B100B1BB2F /* PCAColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9117290B181A65B100B1BB2F /* PCAColor.m */; };
+		9117290F181AD26F00B1BB2F /* PCAWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9117290E181AD26F00B1BB2F /* PCAWindow.m */; };
+		91172912181AD40A00B1BB2F /* PCAFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 91172911181AD40A00B1BB2F /* PCAFrame.m */; };
+		91172915181AD44A00B1BB2F /* PCAPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 91172914181AD44A00B1BB2F /* PCAPoint.m */; };
+		91172917181B55C100B1BB2F /* runtime.js in Sources */ = {isa = PBXBuildFile; fileRef = 91172916181B55C100B1BB2F /* runtime.js */; };
+		91172918181B57C000B1BB2F /* runtime.js in Resources */ = {isa = PBXBuildFile; fileRef = 91172916181B55C100B1BB2F /* runtime.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +70,15 @@
 		91172903181A600C00B1BB2F /* PCAViewerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCAViewerWindowController.m; sourceTree = "<group>"; };
 		91172904181A600C00B1BB2F /* PCAViewerWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCAViewerWindowController.xib; sourceTree = "<group>"; };
 		91172907181A62D800B1BB2F /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
+		9117290A181A65B100B1BB2F /* PCAColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCAColor.h; sourceTree = "<group>"; };
+		9117290B181A65B100B1BB2F /* PCAColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCAColor.m; sourceTree = "<group>"; };
+		9117290D181AD26F00B1BB2F /* PCAWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCAWindow.h; sourceTree = "<group>"; };
+		9117290E181AD26F00B1BB2F /* PCAWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCAWindow.m; sourceTree = "<group>"; };
+		91172910181AD40A00B1BB2F /* PCAFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCAFrame.h; sourceTree = "<group>"; };
+		91172911181AD40A00B1BB2F /* PCAFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCAFrame.m; sourceTree = "<group>"; };
+		91172913181AD44A00B1BB2F /* PCAPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCAPoint.h; sourceTree = "<group>"; };
+		91172914181AD44A00B1BB2F /* PCAPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCAPoint.m; sourceTree = "<group>"; };
+		91172916181B55C100B1BB2F /* runtime.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = runtime.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +195,15 @@
 				911728FA181A0D0900B1BB2F /* PCARuntime.m */,
 				911728FC181A5DB200B1BB2F /* PCAConsole.h */,
 				911728FD181A5DB200B1BB2F /* PCAConsole.m */,
+				9117290A181A65B100B1BB2F /* PCAColor.h */,
+				9117290B181A65B100B1BB2F /* PCAColor.m */,
+				9117290D181AD26F00B1BB2F /* PCAWindow.h */,
+				9117290E181AD26F00B1BB2F /* PCAWindow.m */,
+				91172910181AD40A00B1BB2F /* PCAFrame.h */,
+				91172911181AD40A00B1BB2F /* PCAFrame.m */,
+				91172913181AD44A00B1BB2F /* PCAPoint.h */,
+				91172914181AD44A00B1BB2F /* PCAPoint.m */,
+				91172916181B55C100B1BB2F /* runtime.js */,
 			);
 			path = runtime;
 			sourceTree = "<group>";
@@ -267,6 +291,7 @@
 				911728DD181A0CCB00B1BB2F /* Images.xcassets in Resources */,
 				911728D5181A0CCB00B1BB2F /* Credits.rtf in Resources */,
 				911728DB181A0CCB00B1BB2F /* MainMenu.xib in Resources */,
+				91172918181B57C000B1BB2F /* runtime.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,10 +312,15 @@
 			files = (
 				91172908181A62D800B1BB2F /* test.js in Sources */,
 				911728D1181A0CCB00B1BB2F /* main.m in Sources */,
+				9117290F181AD26F00B1BB2F /* PCAWindow.m in Sources */,
+				9117290C181A65B100B1BB2F /* PCAColor.m in Sources */,
 				911728D8181A0CCB00B1BB2F /* PCAAppDelegate.m in Sources */,
 				911728FE181A5DB200B1BB2F /* PCAConsole.m in Sources */,
 				91172905181A600C00B1BB2F /* PCAViewerWindowController.m in Sources */,
+				91172915181AD44A00B1BB2F /* PCAPoint.m in Sources */,
+				91172912181AD40A00B1BB2F /* PCAFrame.m in Sources */,
 				911728FB181A0D0900B1BB2F /* PCARuntime.m in Sources */,
+				91172917181B55C100B1BB2F /* runtime.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,5 +10,5 @@
 #import "PCARuntime.h"
 
 @interface PCAViewerWindowController : NSWindowController
-@property (nonatomic, readonly) PCARuntime* runtime;
+@property (nonatomic, strong) PCARuntime* runtime;
 @end

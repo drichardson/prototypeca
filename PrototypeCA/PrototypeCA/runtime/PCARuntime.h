@@ -16,9 +16,9 @@
 @interface PCARuntime : NSObject
 
 /// \brief The root layer used by this \c PCARuntime
-@property (nonatomic, readonly) CALayer* layer;
+@property (nonatomic, strong) CALayer* layer;
 
 /// \brief The JSContext used to by this \c PCARuntime.
-@property (nonatomic, readonly) JSContext* context;
+@property (atomic, strong) JSContext* context;
 
 @end
