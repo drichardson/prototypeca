@@ -9,9 +9,13 @@
 @import JavaScriptCore;
 @import CoreGraphics;
 
+@class PCAPoint;
+
 @protocol PCAPointExports <JSExport>
 @property (nonatomic) double x;
 @property (nonatomic) double y;
+- (NSString*)description;
++ (PCAPoint*)makePointX:(double)x y:(double)y;
 @end
 
 @interface PCAPoint : NSObject <PCAPointExports>

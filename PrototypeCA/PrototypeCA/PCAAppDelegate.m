@@ -20,9 +20,7 @@
     _windows = [NSMutableSet set];
     
     PCAViewerWindowController* viewer = [[PCAViewerWindowController alloc] init];
-    @autoreleasepool {
     [viewer showWindow:self];
-    }
     [_windows addObject:viewer];
     NSString* path = [[NSBundle bundleForClass:[self class]] pathForResource:@"test" ofType:@"js"];
     NSError* error = nil;
@@ -33,6 +31,11 @@
     }
  
     [viewer.runtime.context evaluateScript:javascript];
+    JSValue* exception = viewer.runtime.context.exception;
+    if (exception) {
+        // TODO: Report to user
+        NSLog(@"Exception running script: %@", exception);
+    }
     
 }
 

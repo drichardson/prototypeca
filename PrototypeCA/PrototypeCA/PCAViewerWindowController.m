@@ -33,11 +33,7 @@
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     
-    @autoreleasepool {
     _runtime = [[PCARuntime alloc] init];
-    }
-
-    if (_runtime == nil) return;
     
     CALayer* contentLayer = ((NSView*)self.window.contentView).layer;
     _runtime.layer.frame = contentLayer.bounds;

@@ -10,6 +10,14 @@
 
 @implementation PCAPoint
 
++ (PCAPoint*)makePointX:(double)x y:(double)y
+{
+    PCAPoint* result = [[PCAPoint alloc] init];
+    result.x = x;
+    result.y = y;
+    return result;
+}
+
 - (double)x
 {
     return _cgPoint.x;
@@ -28,6 +36,11 @@
 - (void)setY:(double)y
 {
     _cgPoint.y = y;
+}
+
+- (NSString*)description
+{
+    return [NSString stringWithFormat:@"{%f, %f}", _cgPoint.x, _cgPoint.y];
 }
 
 @end
