@@ -22,6 +22,8 @@
     PCAViewerWindowController* viewer = [[PCAViewerWindowController alloc] init];
     [viewer showWindow:self];
     [_windows addObject:viewer];
+    
+#if 0
     NSString* path = [[NSBundle bundleForClass:[self class]] pathForResource:@"test" ofType:@"js"];
     NSError* error = nil;
     NSString* javascript = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
@@ -36,6 +38,7 @@
         // TODO: Report to user
         NSLog(@"Exception running script: %@", exception);
     }
+#endif
     
 }
 

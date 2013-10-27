@@ -11,8 +11,8 @@
 @import JavaScriptCore;
 
 
-/// PCARuntime provides the JavaScript runtime for PrototypeCA. This code should be
-/// sharable between OS X and iOS.
+/// PCARuntime provides the JavaScript runtime for PrototypeCA. Most of this code should be
+/// portable between OS X and iOS.
 @interface PCARuntime : NSObject
 
 /// \brief The root layer used by this \c PCARuntime

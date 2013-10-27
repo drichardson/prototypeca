@@ -8,9 +8,6 @@
 
 #import "PCARuntime.h"
 #import "PCAConsole.h"
-#import "PCAPoint.h"
-#import "PCASize.h"
-#import "PCARect.h"
 
 @interface PCARuntime ()
 - (BOOL)initializeJavaScriptRuntime:(JSContext*)context error:(NSError**)error;
@@ -40,9 +37,17 @@
 - (BOOL)initializeJavaScriptRuntime:(JSContext*)context error:(NSError**)error
 {
     context[@"console"] = [[PCAConsole alloc] init];
-    context[@"point"] = [PCAPoint class];
-    context[@"size"] = [PCASize class];
-    context[@"rect"] = [PCARect class];
+    
+    NSString* runtimeJSPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"runtime" ofType:@"js"];
+    NSString* runtimeJavaScript = [NSString stringWithContentsOfFile:runtimeJSPath encoding:NSUTF8StringEncoding error:error];
+    if (runtimeJavaScript) {
+        [context evaluateScript:runtimeJavaScript];
+        JSValue* exception = [context exception];
+        if (exception) {
+            NSLog(@"Error loading JavaScript portion of the runtime. %@", exception);
+            return NO;
+        }
+    }
     
     return YES;
 }

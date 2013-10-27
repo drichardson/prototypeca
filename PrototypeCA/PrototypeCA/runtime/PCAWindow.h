@@ -11,7 +11,6 @@
 @protocol PCAWindowExports <JSExport>
 @end
 
-/// Two classes here, one for OSX and one for iOS.
 @interface PCAWindow : NSObject
 @property (nonatomic, strong) NSWindow* window;
 @end

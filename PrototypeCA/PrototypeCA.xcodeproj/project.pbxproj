@@ -22,13 +22,10 @@
 		911728FE181A5DB200B1BB2F /* PCAConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 911728FD181A5DB200B1BB2F /* PCAConsole.m */; };
 		91172905181A600C00B1BB2F /* PCAViewerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91172903181A600C00B1BB2F /* PCAViewerWindowController.m */; };
 		91172906181A600C00B1BB2F /* PCAViewerWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91172904181A600C00B1BB2F /* PCAViewerWindowController.xib */; };
-		91172908181A62D800B1BB2F /* test.js in Sources */ = {isa = PBXBuildFile; fileRef = 91172907181A62D800B1BB2F /* test.js */; };
-		91172909181A637500B1BB2F /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 91172907181A62D800B1BB2F /* test.js */; };
-		9117290C181A65B100B1BB2F /* PCAColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 9117290B181A65B100B1BB2F /* PCAColor.m */; };
 		9117290F181AD26F00B1BB2F /* PCAWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9117290E181AD26F00B1BB2F /* PCAWindow.m */; };
-		91172915181AD44A00B1BB2F /* PCAPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 91172914181AD44A00B1BB2F /* PCAPoint.m */; };
-		91172935181BA2CF00B1BB2F /* PCARect.m in Sources */ = {isa = PBXBuildFile; fileRef = 91172934181BA2CF00B1BB2F /* PCARect.m */; };
-		91172938181BA35100B1BB2F /* PCASize.m in Sources */ = {isa = PBXBuildFile; fileRef = 91172937181BA35100B1BB2F /* PCASize.m */; };
+		9117293B181CC72200B1BB2F /* JSValue+ColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9117293A181CC72200B1BB2F /* JSValue+ColorAdditions.m */; };
+		9117293D181CD5EE00B1BB2F /* runtime.js in Sources */ = {isa = PBXBuildFile; fileRef = 9117293C181CD5EE00B1BB2F /* runtime.js */; };
+		9117293E181CD5F900B1BB2F /* runtime.js in Resources */ = {isa = PBXBuildFile; fileRef = 9117293C181CD5EE00B1BB2F /* runtime.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,17 +65,11 @@
 		91172902181A600C00B1BB2F /* PCAViewerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCAViewerWindowController.h; sourceTree = "<group>"; };
 		91172903181A600C00B1BB2F /* PCAViewerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCAViewerWindowController.m; sourceTree = "<group>"; };
 		91172904181A600C00B1BB2F /* PCAViewerWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCAViewerWindowController.xib; sourceTree = "<group>"; };
-		91172907181A62D800B1BB2F /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
-		9117290A181A65B100B1BB2F /* PCAColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCAColor.h; sourceTree = "<group>"; };
-		9117290B181A65B100B1BB2F /* PCAColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCAColor.m; sourceTree = "<group>"; };
 		9117290D181AD26F00B1BB2F /* PCAWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCAWindow.h; sourceTree = "<group>"; };
 		9117290E181AD26F00B1BB2F /* PCAWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCAWindow.m; sourceTree = "<group>"; };
-		91172913181AD44A00B1BB2F /* PCAPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCAPoint.h; sourceTree = "<group>"; };
-		91172914181AD44A00B1BB2F /* PCAPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCAPoint.m; sourceTree = "<group>"; };
-		91172933181BA2CF00B1BB2F /* PCARect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCARect.h; sourceTree = "<group>"; };
-		91172934181BA2CF00B1BB2F /* PCARect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCARect.m; sourceTree = "<group>"; };
-		91172936181BA35100B1BB2F /* PCASize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCASize.h; sourceTree = "<group>"; };
-		91172937181BA35100B1BB2F /* PCASize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCASize.m; sourceTree = "<group>"; };
+		91172939181CC72200B1BB2F /* JSValue+ColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSValue+ColorAdditions.h"; sourceTree = "<group>"; };
+		9117293A181CC72200B1BB2F /* JSValue+ColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSValue+ColorAdditions.m"; sourceTree = "<group>"; };
+		9117293C181CD5EE00B1BB2F /* runtime.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = runtime.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +135,6 @@
 		911728CA181A0CCB00B1BB2F /* PrototypeCA */ = {
 			isa = PBXGroup;
 			children = (
-				91172907181A62D800B1BB2F /* test.js */,
 				911728F8181A0CF000B1BB2F /* runtime */,
 				911728D6181A0CCB00B1BB2F /* PCAAppDelegate.h */,
 				911728D7181A0CCB00B1BB2F /* PCAAppDelegate.m */,
@@ -195,16 +185,11 @@
 				911728FA181A0D0900B1BB2F /* PCARuntime.m */,
 				911728FC181A5DB200B1BB2F /* PCAConsole.h */,
 				911728FD181A5DB200B1BB2F /* PCAConsole.m */,
-				9117290A181A65B100B1BB2F /* PCAColor.h */,
-				9117290B181A65B100B1BB2F /* PCAColor.m */,
 				9117290D181AD26F00B1BB2F /* PCAWindow.h */,
 				9117290E181AD26F00B1BB2F /* PCAWindow.m */,
-				91172913181AD44A00B1BB2F /* PCAPoint.h */,
-				91172914181AD44A00B1BB2F /* PCAPoint.m */,
-				91172933181BA2CF00B1BB2F /* PCARect.h */,
-				91172934181BA2CF00B1BB2F /* PCARect.m */,
-				91172936181BA35100B1BB2F /* PCASize.h */,
-				91172937181BA35100B1BB2F /* PCASize.m */,
+				91172939181CC72200B1BB2F /* JSValue+ColorAdditions.h */,
+				9117293A181CC72200B1BB2F /* JSValue+ColorAdditions.m */,
+				9117293C181CD5EE00B1BB2F /* runtime.js */,
 			);
 			path = runtime;
 			sourceTree = "<group>";
@@ -286,12 +271,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91172909181A637500B1BB2F /* test.js in Resources */,
 				91172906181A600C00B1BB2F /* PCAViewerWindowController.xib in Resources */,
 				911728CF181A0CCB00B1BB2F /* InfoPlist.strings in Resources */,
 				911728DD181A0CCB00B1BB2F /* Images.xcassets in Resources */,
 				911728D5181A0CCB00B1BB2F /* Credits.rtf in Resources */,
 				911728DB181A0CCB00B1BB2F /* MainMenu.xib in Resources */,
+				9117293E181CD5F900B1BB2F /* runtime.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,17 +295,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91172908181A62D800B1BB2F /* test.js in Sources */,
 				911728D1181A0CCB00B1BB2F /* main.m in Sources */,
 				9117290F181AD26F00B1BB2F /* PCAWindow.m in Sources */,
-				9117290C181A65B100B1BB2F /* PCAColor.m in Sources */,
 				911728D8181A0CCB00B1BB2F /* PCAAppDelegate.m in Sources */,
-				91172935181BA2CF00B1BB2F /* PCARect.m in Sources */,
 				911728FE181A5DB200B1BB2F /* PCAConsole.m in Sources */,
-				91172938181BA35100B1BB2F /* PCASize.m in Sources */,
 				91172905181A600C00B1BB2F /* PCAViewerWindowController.m in Sources */,
-				91172915181AD44A00B1BB2F /* PCAPoint.m in Sources */,
+				9117293B181CC72200B1BB2F /* JSValue+ColorAdditions.m in Sources */,
 				911728FB181A0D0900B1BB2F /* PCARuntime.m in Sources */,
+				9117293D181CD5EE00B1BB2F /* runtime.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PrototypeCA.app/Contents/MacOS/PrototypeCA";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -500,6 +483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PrototypeCA.app/Contents/MacOS/PrototypeCA";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
