@@ -14,3 +14,15 @@ var rgba = function(red, green, blue, alpha) {
 var rgb = function(red, green, blue) {
     return rgba(red, green, blue, 1);
 }
+
+var point = function(x, y) {
+    return { "x" : x, "y" : y };
+}
+
+var size = function(width, height) {
+    return { "width" : width, "height" : height };
+}
+
+var rectangle = function(x, y, width, height) {
+    return { "x" : x, "y" : y, "width" : width, "height" : height }
+}

@@ -38,6 +38,8 @@
 {
     context[@"console"] = [[PCAConsole alloc] init];
     
+    
+    // JavaScript portion of the runtime. This should run after the native portion of the runtime is complete.
     NSString* runtimeJSPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"runtime" ofType:@"js"];
     NSString* runtimeJavaScript = [NSString stringWithContentsOfFile:runtimeJSPath encoding:NSUTF8StringEncoding error:error];
     if (runtimeJavaScript) {
