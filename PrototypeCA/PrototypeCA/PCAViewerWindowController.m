@@ -41,9 +41,9 @@
     [contentLayer addSublayer:_runtime.layer];
     
     [_runtime.context evaluateScript:@"console.log('test')"];
-    [_runtime.context evaluateScript:@"describe({ 'key' : 1 })"];
-    [_runtime.context evaluateScript:@"describe(rootLayer.bounds)"];
+    [_runtime.context evaluateScript:@"console.log('root layer is ' + rootLayer)"];
     [_runtime.context evaluateScript:@"rootLayer.backgroundColor = rgb(1,0,0);"];
+    [_runtime.context evaluateScript:@"console.log('root layer 2is ' + rootLayer)"];
     JSValue* exception = _runtime.context.exception;
     if (exception) {
         NSLog(@"EXCEPTION: %@", exception);

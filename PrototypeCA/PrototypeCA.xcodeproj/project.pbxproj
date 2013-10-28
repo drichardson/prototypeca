@@ -66,6 +66,7 @@
 		9117293C181CD5EE00B1BB2F /* runtime.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = runtime.js; sourceTree = "<group>"; };
 		9136D62C181E100A0017C633 /* PCALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCALayer.h; sourceTree = "<group>"; };
 		9136D62D181E100A0017C633 /* PCALayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCALayer.m; sourceTree = "<group>"; };
+		9136D62F181E3C750017C633 /* PCAMediaTimingExports.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCAMediaTimingExports.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +183,7 @@
 				9117293A181CC72200B1BB2F /* JSValue+ColorAdditions.m */,
 				9136D62C181E100A0017C633 /* PCALayer.h */,
 				9136D62D181E100A0017C633 /* PCALayer.m */,
+				9136D62F181E3C750017C633 /* PCAMediaTimingExports.h */,
 				911728F9181A0D0900B1BB2F /* PCARuntime.h */,
 				911728FA181A0D0900B1BB2F /* PCARuntime.m */,
 			);

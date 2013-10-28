@@ -51,6 +51,13 @@
     _layer = layer.layer;
     context[@"rootLayer"] = layer;
     
+    // CA constants
+    context[@"kCAFillModeForwards"] = kCAFillModeForwards;
+    context[@"kCAFillModeBackwards"] = kCAFillModeBackwards;
+    context[@"kCAFillModeBoth"] = kCAFillModeBoth;
+    context[@"kCAFillModeRemoved"] = kCAFillModeRemoved;
+    
+    
     //context[@"NewLayer"] = ^{ return [[PCALayer alloc] init]; };
     
     // JavaScript portion of the runtime. This should run after the native portion of the runtime is complete.

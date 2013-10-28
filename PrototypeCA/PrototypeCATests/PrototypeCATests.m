@@ -94,4 +94,25 @@
     lastMessage = msg;
 }
 
+- (void)testMediaTimingInLayer
+{
+    CALayer* layer = [runtime layer];
+    [[runtime context] evaluateScript:@"rootLayer.beginTime = 2.5"];
+    XCTAssertEqualWithAccuracy([layer beginTime], 2.5, 0.001, @"");
+    [[runtime context] evaluateScript:@"rootLayer.duration = 1.23"];
+    XCTAssertEqualWithAccuracy([layer duration], 1.23, 0.001, @"");
+    [[runtime context] evaluateScript:@"rootLayer.speed = 1.11"];
+    XCTAssertEqualWithAccuracy([layer speed], 1.11, 0.001, @"");
+    [[runtime context] evaluateScript:@"rootLayer.timeOffset = 11.23"];
+    XCTAssertEqualWithAccuracy([layer timeOffset], 11.23, 0.001, @"");
+    [[runtime context] evaluateScript:@"rootLayer.repeatCount = 3"];
+    XCTAssertEqualWithAccuracy([layer repeatCount], 3, 0.001, @"");
+    [[runtime context] evaluateScript:@"rootLayer.repeatDuration = 5.78"];
+    XCTAssertEqualWithAccuracy([layer repeatDuration], 5.78, 0.001, @"");
+    [[runtime context] evaluateScript:@"rootLayer.autoreverses = true"];
+    XCTAssert([layer autoreverses], @"");
+    [[runtime context] evaluateScript:@"rootLayer.fillMode = kCAFillModeBoth"];
+    XCTAssertEqualObjects([layer fillMode], kCAFillModeBoth, @"");
+}
+
 @end
