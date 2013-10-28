@@ -29,3 +29,12 @@ var size = function(width, height) {
 var rectangle = function(x, y, width, height) {
     return { "x" : x, "y" : y, "width" : width, "height" : height }
 }
+
+/// Log an object, enumerating it's fields.
+var describe = function(object) {
+    console.log("describe called");
+    for(var propertyName in object) {
+        console.log(propertyName + ': ' + object[propertyName]);
+    }
+    console.log("describe ending");
+}

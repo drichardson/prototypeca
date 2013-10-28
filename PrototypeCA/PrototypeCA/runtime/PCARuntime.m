@@ -7,6 +7,7 @@
 //
 
 #import "PCARuntime.h"
+#import "PCALayer.h"
 
 @interface PCARuntime ()
 - (BOOL)initializeJavaScriptRuntime:(JSContext*)context error:(NSError**)error;
@@ -25,7 +26,6 @@
     self = [super init];
     if (self) {
         _delegate  = delegate;
-        _layer = [CALayer layer];
         
         JSContext* context = [[JSContext alloc] init];
         
@@ -46,6 +46,12 @@
     __weak PCARuntime* weakSelf = self;
     
     context[@"console"] = @{ @"log" : ^(NSString* msg){ [_delegate runtime:weakSelf consoleLogMessage:msg]; }};
+    
+    PCALayer* layer = [[PCALayer alloc] init];
+    _layer = layer.layer;
+    context[@"rootLayer"] = layer;
+    
+    //context[@"NewLayer"] = ^{ return [[PCALayer alloc] init]; };
     
     // JavaScript portion of the runtime. This should run after the native portion of the runtime is complete.
     NSString* runtimeJSPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"runtime" ofType:@"js"];
