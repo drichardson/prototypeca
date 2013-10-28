@@ -8,7 +8,7 @@
 
 #import "PCAViewerWindowController.h"
 
-@interface PCAViewerWindowController ()
+@interface PCAViewerWindowController () <PCARuntimeDelegate>
 
 @end
 
@@ -33,12 +33,17 @@
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     
-    _runtime = [[PCARuntime alloc] init];
+    _runtime = [[PCARuntime alloc] initWithDelegate:self];
     
     CALayer* contentLayer = ((NSView*)self.window.contentView).layer;
     _runtime.layer.frame = contentLayer.bounds;
     _runtime.layer.autoresizingMask = kCALayerWidthSizable | kCALayerHeightSizable;
     [contentLayer addSublayer:_runtime.layer];
+}
+
+- (void)runtime:(PCARuntime *)runtime consoleLogMessage:(NSString *)msg
+{
+    NSLog(@"RUNTIME: %@", msg);
 }
 
 @end

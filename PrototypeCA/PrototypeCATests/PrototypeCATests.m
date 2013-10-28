@@ -10,19 +10,20 @@
 #import "PCARuntime.h"
 #import "JSValue+ColorAdditions.h"
 
-@interface PrototypeCATests : XCTestCase
+@interface PrototypeCATests : XCTestCase <PCARuntimeDelegate>
 @end
 
 @implementation PrototypeCATests
 {
     PCARuntime* runtime;
+    NSString* lastMessage;
 }
 
 - (void)setUp
 {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    runtime = [[PCARuntime alloc] init];
+    runtime = [[PCARuntime alloc] initWithDelegate:self];
 }
 
 - (void)tearDown
@@ -80,6 +81,17 @@
 {
     JSValue* v = [runtime.context evaluateScript:@"rectangle(1,2,3,4)"];
     XCTAssertTrue(CGRectEqualToRect([v toRect], CGRectMake(1,2,3,4)), @"");
+}
+
+- (void)testConsoleLog
+{
+    [runtime.context evaluateScript:@"console.log('testing 1 2 3')"];
+    XCTAssertEqualObjects(lastMessage, @"testing 1 2 3", @"");
+}
+
+- (void)runtime:(PCARuntime *)runtime consoleLogMessage:(NSString *)msg
+{
+    lastMessage = msg;
 }
 
 @end

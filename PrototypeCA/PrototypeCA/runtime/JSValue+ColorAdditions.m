@@ -9,6 +9,7 @@
 #import "JSValue+ColorAdditions.h"
 
 @implementation JSValue (ColorAdditions)
+
 + (JSValue*)valueWithCGColor:(CGColorRef)color inContext:(JSContext *)context
 {
     CGFloat const* components = CGColorGetComponents(color);

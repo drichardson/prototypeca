@@ -19,12 +19,9 @@
 		911728ED181A0CCB00B1BB2F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 911728EB181A0CCB00B1BB2F /* InfoPlist.strings */; };
 		911728EF181A0CCB00B1BB2F /* PrototypeCATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 911728EE181A0CCB00B1BB2F /* PrototypeCATests.m */; };
 		911728FB181A0D0900B1BB2F /* PCARuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 911728FA181A0D0900B1BB2F /* PCARuntime.m */; };
-		911728FE181A5DB200B1BB2F /* PCAConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 911728FD181A5DB200B1BB2F /* PCAConsole.m */; };
 		91172905181A600C00B1BB2F /* PCAViewerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91172903181A600C00B1BB2F /* PCAViewerWindowController.m */; };
 		91172906181A600C00B1BB2F /* PCAViewerWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91172904181A600C00B1BB2F /* PCAViewerWindowController.xib */; };
-		9117290F181AD26F00B1BB2F /* PCAWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9117290E181AD26F00B1BB2F /* PCAWindow.m */; };
 		9117293B181CC72200B1BB2F /* JSValue+ColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9117293A181CC72200B1BB2F /* JSValue+ColorAdditions.m */; };
-		9117293D181CD5EE00B1BB2F /* runtime.js in Sources */ = {isa = PBXBuildFile; fileRef = 9117293C181CD5EE00B1BB2F /* runtime.js */; };
 		9117293E181CD5F900B1BB2F /* runtime.js in Resources */ = {isa = PBXBuildFile; fileRef = 9117293C181CD5EE00B1BB2F /* runtime.js */; };
 /* End PBXBuildFile section */
 
@@ -60,13 +57,9 @@
 		911728EE181A0CCB00B1BB2F /* PrototypeCATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrototypeCATests.m; sourceTree = "<group>"; };
 		911728F9181A0D0900B1BB2F /* PCARuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCARuntime.h; sourceTree = "<group>"; };
 		911728FA181A0D0900B1BB2F /* PCARuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCARuntime.m; sourceTree = "<group>"; };
-		911728FC181A5DB200B1BB2F /* PCAConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCAConsole.h; sourceTree = "<group>"; };
-		911728FD181A5DB200B1BB2F /* PCAConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCAConsole.m; sourceTree = "<group>"; };
 		91172902181A600C00B1BB2F /* PCAViewerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCAViewerWindowController.h; sourceTree = "<group>"; };
 		91172903181A600C00B1BB2F /* PCAViewerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCAViewerWindowController.m; sourceTree = "<group>"; };
 		91172904181A600C00B1BB2F /* PCAViewerWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCAViewerWindowController.xib; sourceTree = "<group>"; };
-		9117290D181AD26F00B1BB2F /* PCAWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCAWindow.h; sourceTree = "<group>"; };
-		9117290E181AD26F00B1BB2F /* PCAWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCAWindow.m; sourceTree = "<group>"; };
 		91172939181CC72200B1BB2F /* JSValue+ColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSValue+ColorAdditions.h"; sourceTree = "<group>"; };
 		9117293A181CC72200B1BB2F /* JSValue+ColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSValue+ColorAdditions.m"; sourceTree = "<group>"; };
 		9117293C181CD5EE00B1BB2F /* runtime.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = runtime.js; sourceTree = "<group>"; };
@@ -183,10 +176,6 @@
 			children = (
 				911728F9181A0D0900B1BB2F /* PCARuntime.h */,
 				911728FA181A0D0900B1BB2F /* PCARuntime.m */,
-				911728FC181A5DB200B1BB2F /* PCAConsole.h */,
-				911728FD181A5DB200B1BB2F /* PCAConsole.m */,
-				9117290D181AD26F00B1BB2F /* PCAWindow.h */,
-				9117290E181AD26F00B1BB2F /* PCAWindow.m */,
 				91172939181CC72200B1BB2F /* JSValue+ColorAdditions.h */,
 				9117293A181CC72200B1BB2F /* JSValue+ColorAdditions.m */,
 				9117293C181CD5EE00B1BB2F /* runtime.js */,
@@ -296,13 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				911728D1181A0CCB00B1BB2F /* main.m in Sources */,
-				9117290F181AD26F00B1BB2F /* PCAWindow.m in Sources */,
 				911728D8181A0CCB00B1BB2F /* PCAAppDelegate.m in Sources */,
-				911728FE181A5DB200B1BB2F /* PCAConsole.m in Sources */,
 				91172905181A600C00B1BB2F /* PCAViewerWindowController.m in Sources */,
 				9117293B181CC72200B1BB2F /* JSValue+ColorAdditions.m in Sources */,
 				911728FB181A0D0900B1BB2F /* PCARuntime.m in Sources */,
-				9117293D181CD5EE00B1BB2F /* runtime.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

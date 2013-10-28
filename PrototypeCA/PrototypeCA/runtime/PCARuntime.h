@@ -6,14 +6,22 @@
 //  Copyright (c) 2013 PrototypeCA. All rights reserved.
 //
 
-@import Foundation;
 @import QuartzCore;
 @import JavaScriptCore;
 
+@protocol PCARuntimeDelegate;
 
-/// PCARuntime provides the JavaScript runtime for PrototypeCA. Most of this code should be
-/// portable between OS X and iOS.
+/// \brief PCARuntime provides the JavaScript runtime for PrototypeCA. This code should be portable
+/// between iOS and OS X. Non-portable code should be implemented by the delegate.
 @interface PCARuntime : NSObject
+
+/// \brief Initialize an PCARuntime object with the given delegate. The delegate implements applications
+/// and OS specific parts of the runtime.
+- (instancetype)initWithDelegate:(id <PCARuntimeDelegate>)delegate;
+
+/// \brief The purpose of the delegate is to customer the PCARuntime object for a particular
+/// application as well as handle OS specific tasks, such as working with windows.
+@property (nonatomic, weak) id <PCARuntimeDelegate> delegate;
 
 /// \brief The root layer used by this \c PCARuntime
 @property (nonatomic, strong) CALayer* layer;
@@ -22,3 +30,10 @@
 @property (atomic, strong) JSContext* context;
 
 @end
+
+@protocol PCARuntimeDelegate <NSObject>
+@required
+/// \brief Called when console.log() is invoked in JavaScript.
+- (void)runtime:(PCARuntime*)runtime consoleLogMessage:(NSString*)msg;
+@end
+

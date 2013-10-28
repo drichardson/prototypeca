@@ -15,14 +15,17 @@ var rgb = function(red, green, blue) {
     return rgba(red, green, blue, 1);
 }
 
+/// Create a 2 dimentional point object from an x and y coordinate.
 var point = function(x, y) {
     return { "x" : x, "y" : y };
 }
 
+/// Create a size object from a width and height.
 var size = function(width, height) {
     return { "width" : width, "height" : height };
 }
 
+/// Create a rectangle object with origin at (x,y) with the given width and height.
 var rectangle = function(x, y, width, height) {
     return { "x" : x, "y" : y, "width" : width, "height" : height }
 }

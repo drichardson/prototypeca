@@ -7,7 +7,6 @@
 //
 
 #import "PCARuntime.h"
-#import "PCAConsole.h"
 
 @interface PCARuntime ()
 - (BOOL)initializeJavaScriptRuntime:(JSContext*)context error:(NSError**)error;
@@ -15,10 +14,17 @@
 
 @implementation PCARuntime
 
-- (instancetype)init
+- (id)init
+{
+    [[NSException exceptionWithName:@"Not implemented" reason:@"Use initWithDelegate: instead" userInfo:nil] raise];
+    return nil;
+}
+
+- (instancetype)initWithDelegate:(id <PCARuntimeDelegate>)delegate
 {
     self = [super init];
     if (self) {
+        _delegate  = delegate;
         _layer = [CALayer layer];
         
         JSContext* context = [[JSContext alloc] init];
@@ -31,13 +37,15 @@
         
         _context = context;
     }
+    
     return self;
 }
 
 - (BOOL)initializeJavaScriptRuntime:(JSContext*)context error:(NSError**)error
 {
-    context[@"console"] = [[PCAConsole alloc] init];
+    __weak PCARuntime* weakSelf = self;
     
+    context[@"console"] = @{ @"log" : ^(NSString* msg){ [_delegate runtime:weakSelf consoleLogMessage:msg]; }};
     
     // JavaScript portion of the runtime. This should run after the native portion of the runtime is complete.
     NSString* runtimeJSPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"runtime" ofType:@"js"];
