@@ -4,11 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
-            <connections>
-                <outlet property="delegate" destination="494" id="495"/>
-            </connections>
-        </customObject>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application"/>
         <menu title="AMainMenu" systemMenu="main" id="29">
@@ -116,7 +112,7 @@
                             </menuItem>
                             <menuItem title="Print…" keyEquivalent="p" id="78">
                                 <connections>
-                                    <action selector="print:" target="-1" id="86"/>
+                                    <action selector="printDocument:" target="-1" id="TD2-7h-Olu"/>
                                 </connections>
                             </menuItem>
                         </items>
@@ -646,7 +642,6 @@
                 </menuItem>
             </items>
         </menu>
-        <customObject id="494" customClass="PCAAppDelegate"/>
         <customObject id="420" customClass="NSFontManager"/>
     </objects>
 </document>

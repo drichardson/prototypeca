@@ -11,7 +11,6 @@
 		911728CF181A0CCB00B1BB2F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 911728CD181A0CCB00B1BB2F /* InfoPlist.strings */; };
 		911728D1181A0CCB00B1BB2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 911728D0181A0CCB00B1BB2F /* main.m */; };
 		911728D5181A0CCB00B1BB2F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 911728D3181A0CCB00B1BB2F /* Credits.rtf */; };
-		911728D8181A0CCB00B1BB2F /* PCAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 911728D7181A0CCB00B1BB2F /* PCAAppDelegate.m */; };
 		911728DB181A0CCB00B1BB2F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 911728D9181A0CCB00B1BB2F /* MainMenu.xib */; };
 		911728DD181A0CCB00B1BB2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 911728DC181A0CCB00B1BB2F /* Images.xcassets */; };
 		911728E4181A0CCB00B1BB2F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911728E3181A0CCB00B1BB2F /* XCTest.framework */; };
@@ -24,6 +23,8 @@
 		9117293B181CC72200B1BB2F /* JSValue+ColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9117293A181CC72200B1BB2F /* JSValue+ColorAdditions.m */; };
 		9117293E181CD5F900B1BB2F /* runtime.js in Resources */ = {isa = PBXBuildFile; fileRef = 9117293C181CD5EE00B1BB2F /* runtime.js */; };
 		9136D62E181E100A0017C633 /* PCALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9136D62D181E100A0017C633 /* PCALayer.m */; };
+		91A14D101821FEB300F3E5F4 /* PCADocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A14D0E1821FEB300F3E5F4 /* PCADocument.m */; };
+		91A14D111821FEB300F3E5F4 /* PCADocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A14D0F1821FEB300F3E5F4 /* PCADocument.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +48,6 @@
 		911728D0181A0CCB00B1BB2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		911728D2181A0CCB00B1BB2F /* PrototypeCA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PrototypeCA-Prefix.pch"; sourceTree = "<group>"; };
 		911728D4181A0CCB00B1BB2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		911728D6181A0CCB00B1BB2F /* PCAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCAAppDelegate.h; sourceTree = "<group>"; };
-		911728D7181A0CCB00B1BB2F /* PCAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCAAppDelegate.m; sourceTree = "<group>"; };
 		911728DA181A0CCB00B1BB2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		911728DC181A0CCB00B1BB2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		911728E2181A0CCB00B1BB2F /* PrototypeCATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrototypeCATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +66,9 @@
 		9136D62C181E100A0017C633 /* PCALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCALayer.h; sourceTree = "<group>"; };
 		9136D62D181E100A0017C633 /* PCALayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCALayer.m; sourceTree = "<group>"; };
 		9136D62F181E3C750017C633 /* PCAMediaTimingExports.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCAMediaTimingExports.h; sourceTree = "<group>"; };
+		91A14D0D1821FEB300F3E5F4 /* PCADocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCADocument.h; sourceTree = "<group>"; };
+		91A14D0E1821FEB300F3E5F4 /* PCADocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCADocument.m; sourceTree = "<group>"; };
+		91A14D0F1821FEB300F3E5F4 /* PCADocument.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCADocument.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,14 +135,15 @@
 			isa = PBXGroup;
 			children = (
 				911728F8181A0CF000B1BB2F /* runtime */,
-				911728D6181A0CCB00B1BB2F /* PCAAppDelegate.h */,
-				911728D7181A0CCB00B1BB2F /* PCAAppDelegate.m */,
 				91172902181A600C00B1BB2F /* PCAViewerWindowController.h */,
 				91172903181A600C00B1BB2F /* PCAViewerWindowController.m */,
 				91172904181A600C00B1BB2F /* PCAViewerWindowController.xib */,
 				911728D9181A0CCB00B1BB2F /* MainMenu.xib */,
 				911728DC181A0CCB00B1BB2F /* Images.xcassets */,
 				911728CB181A0CCB00B1BB2F /* Supporting Files */,
+				91A14D0D1821FEB300F3E5F4 /* PCADocument.h */,
+				91A14D0E1821FEB300F3E5F4 /* PCADocument.m */,
+				91A14D0F1821FEB300F3E5F4 /* PCADocument.xib */,
 			);
 			path = PrototypeCA;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				911728DD181A0CCB00B1BB2F /* Images.xcassets in Resources */,
 				911728D5181A0CCB00B1BB2F /* Credits.rtf in Resources */,
 				911728DB181A0CCB00B1BB2F /* MainMenu.xib in Resources */,
+				91A14D111821FEB300F3E5F4 /* PCADocument.xib in Resources */,
 				9117293E181CD5F900B1BB2F /* runtime.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,11 +296,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				911728D1181A0CCB00B1BB2F /* main.m in Sources */,
-				911728D8181A0CCB00B1BB2F /* PCAAppDelegate.m in Sources */,
 				9136D62E181E100A0017C633 /* PCALayer.m in Sources */,
 				91172905181A600C00B1BB2F /* PCAViewerWindowController.m in Sources */,
 				9117293B181CC72200B1BB2F /* JSValue+ColorAdditions.m in Sources */,
 				911728FB181A0D0900B1BB2F /* PCARuntime.m in Sources */,
+				91A14D101821FEB300F3E5F4 /* PCADocument.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

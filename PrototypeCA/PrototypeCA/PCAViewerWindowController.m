@@ -27,6 +27,11 @@
     return self;
 }
 
+- (IBAction)openDocument:(id)sender
+{
+    NSLog(@"open doc");
+}
+
 - (void)windowDidLoad
 {
     [super windowDidLoad];
