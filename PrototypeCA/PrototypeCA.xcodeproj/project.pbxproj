@@ -18,8 +18,6 @@
 		911728ED181A0CCB00B1BB2F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 911728EB181A0CCB00B1BB2F /* InfoPlist.strings */; };
 		911728EF181A0CCB00B1BB2F /* PrototypeCATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 911728EE181A0CCB00B1BB2F /* PrototypeCATests.m */; };
 		911728FB181A0D0900B1BB2F /* PCARuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 911728FA181A0D0900B1BB2F /* PCARuntime.m */; };
-		91172905181A600C00B1BB2F /* PCAViewerWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91172903181A600C00B1BB2F /* PCAViewerWindowController.m */; };
-		91172906181A600C00B1BB2F /* PCAViewerWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91172904181A600C00B1BB2F /* PCAViewerWindowController.xib */; };
 		9117293B181CC72200B1BB2F /* JSValue+ColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9117293A181CC72200B1BB2F /* JSValue+ColorAdditions.m */; };
 		9117293E181CD5F900B1BB2F /* runtime.js in Resources */ = {isa = PBXBuildFile; fileRef = 9117293C181CD5EE00B1BB2F /* runtime.js */; };
 		9136D62E181E100A0017C633 /* PCALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9136D62D181E100A0017C633 /* PCALayer.m */; };
@@ -57,9 +55,6 @@
 		911728EE181A0CCB00B1BB2F /* PrototypeCATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrototypeCATests.m; sourceTree = "<group>"; };
 		911728F9181A0D0900B1BB2F /* PCARuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCARuntime.h; sourceTree = "<group>"; };
 		911728FA181A0D0900B1BB2F /* PCARuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCARuntime.m; sourceTree = "<group>"; };
-		91172902181A600C00B1BB2F /* PCAViewerWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCAViewerWindowController.h; sourceTree = "<group>"; };
-		91172903181A600C00B1BB2F /* PCAViewerWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCAViewerWindowController.m; sourceTree = "<group>"; };
-		91172904181A600C00B1BB2F /* PCAViewerWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCAViewerWindowController.xib; sourceTree = "<group>"; };
 		91172939181CC72200B1BB2F /* JSValue+ColorAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSValue+ColorAdditions.h"; sourceTree = "<group>"; };
 		9117293A181CC72200B1BB2F /* JSValue+ColorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSValue+ColorAdditions.m"; sourceTree = "<group>"; };
 		9117293C181CD5EE00B1BB2F /* runtime.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = runtime.js; sourceTree = "<group>"; };
@@ -135,9 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				911728F8181A0CF000B1BB2F /* runtime */,
-				91172902181A600C00B1BB2F /* PCAViewerWindowController.h */,
-				91172903181A600C00B1BB2F /* PCAViewerWindowController.m */,
-				91172904181A600C00B1BB2F /* PCAViewerWindowController.xib */,
 				911728D9181A0CCB00B1BB2F /* MainMenu.xib */,
 				911728DC181A0CCB00B1BB2F /* Images.xcassets */,
 				911728CB181A0CCB00B1BB2F /* Supporting Files */,
@@ -270,7 +262,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91172906181A600C00B1BB2F /* PCAViewerWindowController.xib in Resources */,
 				911728CF181A0CCB00B1BB2F /* InfoPlist.strings in Resources */,
 				911728DD181A0CCB00B1BB2F /* Images.xcassets in Resources */,
 				911728D5181A0CCB00B1BB2F /* Credits.rtf in Resources */,
@@ -297,7 +288,6 @@
 			files = (
 				911728D1181A0CCB00B1BB2F /* main.m in Sources */,
 				9136D62E181E100A0017C633 /* PCALayer.m in Sources */,
-				91172905181A600C00B1BB2F /* PCAViewerWindowController.m in Sources */,
 				9117293B181CC72200B1BB2F /* JSValue+ColorAdditions.m in Sources */,
 				911728FB181A0D0900B1BB2F /* PCARuntime.m in Sources */,
 				91A14D101821FEB300F3E5F4 /* PCADocument.m in Sources */,

@@ -8,15 +8,19 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeExtensions</key>
+			<array/>
+			<key>CFBundleTypeMIMETypes</key>
 			<array>
-				<string>js</string>
+				<string>text/plain</string>
 			</array>
 			<key>CFBundleTypeName</key>
-			<string>JavaScript</string>
+			<string></string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>LSItemContentTypes</key>
-			<array/>
+			<array>
+				<string>public.text</string>
+			</array>
 			<key>LSTypeIsPackage</key>
 			<integer>0</integer>
 			<key>NSDocumentClass</key>
