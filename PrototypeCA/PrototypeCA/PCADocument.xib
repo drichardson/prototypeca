@@ -16,9 +16,12 @@
             <rect key="contentRect" x="133" y="235" width="507" height="413"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <value key="minSize" type="size" width="94" height="86"/>
-            <view key="contentView" wantsLayer="YES" id="6">
+            <view key="contentView" wantsLayer="YES" id="6" customClass="PCADocumentView">
                 <rect key="frame" x="0.0" y="0.0" width="507" height="413"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <connections>
+                    <outlet property="delegate" destination="-2" id="w7t-Pp-K4g"/>
+                </connections>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="17"/>

@@ -11,6 +11,8 @@
 
 @protocol PCARuntimeDelegate;
 
+@class PCARuntimeEvent;
+
 /// \brief PCARuntime provides the JavaScript runtime for PrototypeCA. This code should be portable
 /// between iOS and OS X. Non-portable code should be implemented by the delegate.
 @interface PCARuntime : NSObject
@@ -29,6 +31,9 @@
 /// \brief The JSContext used to by this \c PCARuntime.
 @property (atomic, strong) JSContext* context;
 
+/// \brief Send an event to the runtime. For example, a key down event.
+- (void)sendEvent:(PCARuntimeEvent*)event;
+
 @end
 
 @protocol PCARuntimeDelegate <NSObject>
@@ -36,4 +41,3 @@
 /// \brief Called when console.log() is invoked in JavaScript.
 - (void)runtime:(PCARuntime*)runtime consoleLogMessage:(NSString*)msg;
 @end
-

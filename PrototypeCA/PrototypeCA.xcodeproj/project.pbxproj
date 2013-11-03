@@ -23,6 +23,8 @@
 		9136D62E181E100A0017C633 /* PCALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9136D62D181E100A0017C633 /* PCALayer.m */; };
 		91A14D101821FEB300F3E5F4 /* PCADocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A14D0E1821FEB300F3E5F4 /* PCADocument.m */; };
 		91A14D111821FEB300F3E5F4 /* PCADocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A14D0F1821FEB300F3E5F4 /* PCADocument.xib */; };
+		91ED766918260D3B00B53C34 /* PCARuntimeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ED766818260D3B00B53C34 /* PCARuntimeEvent.m */; };
+		91ED766C1826120600B53C34 /* PCADocumentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ED766B1826120600B53C34 /* PCADocumentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +41,6 @@
 		911728C1181A0CCB00B1BB2F /* PrototypeCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrototypeCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		911728C4181A0CCB00B1BB2F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		911728C7181A0CCB00B1BB2F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		911728C8181A0CCB00B1BB2F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		911728C9181A0CCB00B1BB2F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		911728CC181A0CCB00B1BB2F /* PrototypeCA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PrototypeCA-Info.plist"; sourceTree = "<group>"; };
 		911728CE181A0CCB00B1BB2F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -64,6 +65,10 @@
 		91A14D0D1821FEB300F3E5F4 /* PCADocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCADocument.h; sourceTree = "<group>"; };
 		91A14D0E1821FEB300F3E5F4 /* PCADocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCADocument.m; sourceTree = "<group>"; };
 		91A14D0F1821FEB300F3E5F4 /* PCADocument.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCADocument.xib; sourceTree = "<group>"; };
+		91ED766718260D3B00B53C34 /* PCARuntimeEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCARuntimeEvent.h; sourceTree = "<group>"; };
+		91ED766818260D3B00B53C34 /* PCARuntimeEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCARuntimeEvent.m; sourceTree = "<group>"; };
+		91ED766A1826120600B53C34 /* PCADocumentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCADocumentView.h; sourceTree = "<group>"; };
+		91ED766B1826120600B53C34 /* PCADocumentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCADocumentView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				911728C7181A0CCB00B1BB2F /* AppKit.framework */,
-				911728C8181A0CCB00B1BB2F /* CoreData.framework */,
 				911728C9181A0CCB00B1BB2F /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
@@ -136,6 +140,8 @@
 				91A14D0D1821FEB300F3E5F4 /* PCADocument.h */,
 				91A14D0E1821FEB300F3E5F4 /* PCADocument.m */,
 				91A14D0F1821FEB300F3E5F4 /* PCADocument.xib */,
+				91ED766A1826120600B53C34 /* PCADocumentView.h */,
+				91ED766B1826120600B53C34 /* PCADocumentView.m */,
 			);
 			path = PrototypeCA;
 			sourceTree = "<group>";
@@ -181,6 +187,8 @@
 				9136D62F181E3C750017C633 /* PCAMediaTimingExports.h */,
 				911728F9181A0D0900B1BB2F /* PCARuntime.h */,
 				911728FA181A0D0900B1BB2F /* PCARuntime.m */,
+				91ED766718260D3B00B53C34 /* PCARuntimeEvent.h */,
+				91ED766818260D3B00B53C34 /* PCARuntimeEvent.m */,
 			);
 			path = runtime;
 			sourceTree = "<group>";
@@ -287,7 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				911728D1181A0CCB00B1BB2F /* main.m in Sources */,
+				91ED766C1826120600B53C34 /* PCADocumentView.m in Sources */,
 				9136D62E181E100A0017C633 /* PCALayer.m in Sources */,
+				91ED766918260D3B00B53C34 /* PCARuntimeEvent.m in Sources */,
 				9117293B181CC72200B1BB2F /* JSValue+ColorAdditions.m in Sources */,
 				911728FB181A0D0900B1BB2F /* PCARuntime.m in Sources */,
 				91A14D101821FEB300F3E5F4 /* PCADocument.m in Sources */,

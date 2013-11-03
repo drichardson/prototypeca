@@ -8,8 +8,10 @@
 
 #import "PCADocument.h"
 #import "PCARuntime.h"
+#import "PCARuntimeEvent.h"
+#import "PCADocumentView.h"
 
-@interface PCADocument () <PCARuntimeDelegate>
+@interface PCADocument () <PCARuntimeDelegate, PCADocumentViewDelegate>
 @end
 
 @implementation PCADocument
@@ -74,4 +76,19 @@
     NSLog(@"RUNTIME: %@", msg);
 }
 
+#pragma mark PCADocumentViewDelegate
+
+- (void)documentView:(PCADocumentView*)view didReceiveKeyDownEvent:(NSEvent*)event
+{
+    PCARuntimeEvent* pcaEvent = [[PCARuntimeKeyEvent alloc] initWithKey:[event characters] withDirection:PCAKeyDown withKeyCode:[event keyCode]];
+    [_runtime sendEvent:pcaEvent];
+}
+
+- (void)documentView:(PCADocumentView*)view didReceiveKeyUpEvent:(NSEvent*)event
+{
+    PCARuntimeEvent* pcaEdfvent = [[PCARuntimeKeyEvent alloc] initWithKey:[event characters] withDirection:PCAKeyUp withKeyCode:[event keyCode]];
+    [_runtime sendEvent:pcaEdfvent];
+}
+
 @end
+

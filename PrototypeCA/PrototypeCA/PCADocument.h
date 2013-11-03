@@ -6,8 +6,10 @@
 //  Copyright (c) 2013 PrototypeCA. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 
 @interface PCADocument : NSDocument
 
 @end
+
+

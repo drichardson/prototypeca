@@ -74,4 +74,19 @@
     return YES;
 }
 
+- (void)sendEvent:(PCARuntimeEvent*)event
+{
+    JSValue* handler = _context[@"eventHandler"];
+    
+    if (handler == nil || [handler isUndefined]) {
+        return;
+    }
+    
+    [handler callWithArguments:@[event]];
+    JSValue* exception = _context.exception;
+    if (exception) {
+        NSLog(@"Exception while processing event handler. %@", exception);
+    }
+}
+
 @end
