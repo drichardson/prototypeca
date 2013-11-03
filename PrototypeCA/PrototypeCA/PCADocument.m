@@ -17,7 +17,7 @@
 @implementation PCADocument
 {
     PCARuntime* _runtime;
-    NSString* _javaScript;
+    NSURL* _javaScriptURL;
 }
 
 - (id)init
@@ -49,7 +49,7 @@
     _runtime.layer.autoresizingMask = kCALayerWidthSizable | kCALayerHeightSizable;
     [contentLayer addSublayer:_runtime.layer];
     
-    [_runtime.context evaluateScript:_javaScript];
+    [_runtime evaluateScriptAtURL:_javaScriptURL];
     
     // TODO: Log in window
     JSValue* exception = _runtime.context.exception;
@@ -60,12 +60,7 @@
 
 - (BOOL)readFromURL:(NSURL *)url ofType:(NSString *)typeName error:(NSError *__autoreleasing *)outError
 {
-    _javaScript = [NSString stringWithContentsOfURL:url usedEncoding:NULL error:outError];
-    
-    if (_javaScript == nil) {
-        return NO;
-    }
-    
+    _javaScriptURL = url;
     return YES;
 }
 

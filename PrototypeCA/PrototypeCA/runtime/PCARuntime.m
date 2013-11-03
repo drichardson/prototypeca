@@ -89,4 +89,24 @@
     }
 }
 
+- (BOOL)evaluateScriptAtURL:(NSURL*)url
+{
+    NSError* error = nil;
+    NSString* javaScript = [[NSString alloc] initWithContentsOfURL:url usedEncoding:NULL error:&error];
+    JSStringRef script = JSStringCreateWithCFString((__bridge CFStringRef)javaScript);
+    JSStringRef sourceURL = JSStringCreateWithCFString((__bridge CFStringRef)[url absoluteString]);
+    JSValueRef exception = NULL;
+    JSValueRef result = JSEvaluateScript([_context JSGlobalContextRef], script, NULL, sourceURL, 1, &exception);
+    if (result == NULL) {
+        // exception thrown.
+        JSValue* e = [JSValue valueWithJSValueRef:exception inContext:_context];
+        
+        NSLog(@"Exception %@ line %@: %@", e[@"sourceURL"], e[@"line"], e[@"message"]);
+        
+        return NO;
+    }
+    
+    return YES;
+}
+
 @end

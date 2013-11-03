@@ -34,6 +34,10 @@
 /// \brief Send an event to the runtime. For example, a key down event.
 - (void)sendEvent:(PCARuntimeEvent*)event;
 
+/// \brief Evaluate a script at the given URL. Ideally, this is a file URL. This call will
+/// block until it completes.
+- (BOOL)evaluateScriptAtURL:(NSURL*)url;
+
 @end
 
 @protocol PCARuntimeDelegate <NSObject>
