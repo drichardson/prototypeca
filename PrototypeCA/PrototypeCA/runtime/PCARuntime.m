@@ -57,8 +57,7 @@
     context[@"kCAFillModeBoth"] = kCAFillModeBoth;
     context[@"kCAFillModeRemoved"] = kCAFillModeRemoved;
     
-    
-    //context[@"NewLayer"] = ^{ return [[PCALayer alloc] init]; };
+    context[@"Layer"] = ^{ return [[PCALayer alloc] init]; };
     
     // JavaScript portion of the runtime. This should run after the native portion of the runtime is complete.
     NSString* runtimeJSPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"runtime" ofType:@"js"];
