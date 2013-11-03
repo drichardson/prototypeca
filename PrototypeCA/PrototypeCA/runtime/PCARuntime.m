@@ -93,16 +93,24 @@
 {
     NSError* error = nil;
     NSString* javaScript = [[NSString alloc] initWithContentsOfURL:url usedEncoding:NULL error:&error];
+    if (javaScript == nil) {
+        NSLog(@"Couldn't load string from URL %@. %@", url, error);
+        return NO;
+    }
+    
     JSStringRef script = JSStringCreateWithCFString((__bridge CFStringRef)javaScript);
     JSStringRef sourceURL = JSStringCreateWithCFString((__bridge CFStringRef)[url absoluteString]);
     JSValueRef exception = NULL;
+    
     JSValueRef result = JSEvaluateScript([_context JSGlobalContextRef], script, NULL, sourceURL, 1, &exception);
+    
+    JSStringRelease(script);
+    JSStringRelease(sourceURL);
+    
     if (result == NULL) {
         // exception thrown.
         JSValue* e = [JSValue valueWithJSValueRef:exception inContext:_context];
-        
         NSLog(@"Exception %@ line %@: %@", e[@"sourceURL"], e[@"line"], e[@"message"]);
-        
         return NO;
     }
     
