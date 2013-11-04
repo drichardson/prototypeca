@@ -21,6 +21,7 @@
 		9117293B181CC72200B1BB2F /* JSValue+ColorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9117293A181CC72200B1BB2F /* JSValue+ColorAdditions.m */; };
 		9117293E181CD5F900B1BB2F /* runtime.js in Resources */ = {isa = PBXBuildFile; fileRef = 9117293C181CD5EE00B1BB2F /* runtime.js */; };
 		9136D62E181E100A0017C633 /* PCALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9136D62D181E100A0017C633 /* PCALayer.m */; };
+		917016C5182746F300C965BF /* PCADisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 917016C4182746F300C965BF /* PCADisplayLink.m */; };
 		91A14D101821FEB300F3E5F4 /* PCADocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A14D0E1821FEB300F3E5F4 /* PCADocument.m */; };
 		91A14D111821FEB300F3E5F4 /* PCADocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A14D0F1821FEB300F3E5F4 /* PCADocument.xib */; };
 		91ED766918260D3B00B53C34 /* PCARuntimeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 91ED766818260D3B00B53C34 /* PCARuntimeEvent.m */; };
@@ -62,6 +63,8 @@
 		9136D62C181E100A0017C633 /* PCALayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCALayer.h; sourceTree = "<group>"; };
 		9136D62D181E100A0017C633 /* PCALayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCALayer.m; sourceTree = "<group>"; };
 		9136D62F181E3C750017C633 /* PCAMediaTimingExports.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCAMediaTimingExports.h; sourceTree = "<group>"; };
+		917016C3182746F300C965BF /* PCADisplayLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCADisplayLink.h; sourceTree = "<group>"; };
+		917016C4182746F300C965BF /* PCADisplayLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCADisplayLink.m; sourceTree = "<group>"; };
 		91A14D0D1821FEB300F3E5F4 /* PCADocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCADocument.h; sourceTree = "<group>"; };
 		91A14D0E1821FEB300F3E5F4 /* PCADocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCADocument.m; sourceTree = "<group>"; };
 		91A14D0F1821FEB300F3E5F4 /* PCADocument.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PCADocument.xib; sourceTree = "<group>"; };
@@ -182,6 +185,8 @@
 				9117293C181CD5EE00B1BB2F /* runtime.js */,
 				91172939181CC72200B1BB2F /* JSValue+ColorAdditions.h */,
 				9117293A181CC72200B1BB2F /* JSValue+ColorAdditions.m */,
+				917016C3182746F300C965BF /* PCADisplayLink.h */,
+				917016C4182746F300C965BF /* PCADisplayLink.m */,
 				9136D62C181E100A0017C633 /* PCALayer.h */,
 				9136D62D181E100A0017C633 /* PCALayer.m */,
 				9136D62F181E3C750017C633 /* PCAMediaTimingExports.h */,
@@ -297,6 +302,7 @@
 				911728D1181A0CCB00B1BB2F /* main.m in Sources */,
 				91ED766C1826120600B53C34 /* PCADocumentView.m in Sources */,
 				9136D62E181E100A0017C633 /* PCALayer.m in Sources */,
+				917016C5182746F300C965BF /* PCADisplayLink.m in Sources */,
 				91ED766918260D3B00B53C34 /* PCARuntimeEvent.m in Sources */,
 				9117293B181CC72200B1BB2F /* JSValue+ColorAdditions.m in Sources */,
 				911728FB181A0D0900B1BB2F /* PCARuntime.m in Sources */,

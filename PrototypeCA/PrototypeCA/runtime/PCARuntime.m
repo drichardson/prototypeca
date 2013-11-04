@@ -8,6 +8,7 @@
 
 #import "PCARuntime.h"
 #import "PCALayer.h"
+#import "PCADisplayLink.h"
 
 @interface PCARuntime ()
 - (BOOL)initializeJavaScriptRuntime:(JSContext*)context error:(NSError**)error;
@@ -58,6 +59,7 @@
     context[@"kCAFillModeRemoved"] = kCAFillModeRemoved;
     
     context[@"Layer"] = ^{ return [[PCALayer alloc] init]; };
+    context[@"DisplayLink"] = ^{ return [[PCADisplayLink alloc] init]; };
     
     // JavaScript portion of the runtime. This should run after the native portion of the runtime is complete.
     NSString* runtimeJSPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"runtime" ofType:@"js"];
