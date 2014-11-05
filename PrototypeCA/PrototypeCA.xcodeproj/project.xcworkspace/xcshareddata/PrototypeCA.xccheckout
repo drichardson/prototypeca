@@ -10,29 +10,29 @@
 	<string>PrototypeCA</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5CBC97DE-3CEE-426E-8BC7-0DBFFF7BD271</key>
-		<string>ssh://bitbucket.org/dichardson/prototypeca.git</string>
+		<key>866C1FF3A0D0E900C446B99511DB5F5125579D93</key>
+		<string>github.com:drichardson/prototypeca.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PrototypeCA/PrototypeCA.xcodeproj/project.xcworkspace</string>
+	<string>PrototypeCA/PrototypeCA.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5CBC97DE-3CEE-426E-8BC7-0DBFFF7BD271</key>
+		<key>866C1FF3A0D0E900C446B99511DB5F5125579D93</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://bitbucket.org/dichardson/prototypeca.git</string>
+	<string>github.com:drichardson/prototypeca.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5CBC97DE-3CEE-426E-8BC7-0DBFFF7BD271</string>
+	<string>866C1FF3A0D0E900C446B99511DB5F5125579D93</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5CBC97DE-3CEE-426E-8BC7-0DBFFF7BD271</string>
+			<string>866C1FF3A0D0E900C446B99511DB5F5125579D93</string>
 			<key>IDESourceControlWCCName</key>
 			<string>prototypeca</string>
 		</dict>
