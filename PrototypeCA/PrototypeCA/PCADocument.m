@@ -45,11 +45,37 @@
 
 - (void)reload:(id)sender
 {
-    [self runJavaScript];
+    [self reloadJavaScript];
 }
 
-- (void)runJavaScript
+- (NSWindow*)documentWindow
 {
+    if(self.windowControllers.count >= 1)
+    {
+        NSWindowController* c = self.windowControllers[0];
+        return c.window;
+    }
+    return nil;
+}
+
+- (CALayer*)rootLayer
+{
+    NSWindow* w = [self documentWindow];
+    NSView* v = w.contentView;
+    CALayer* l = v.layer;
+    return l;
+}
+
+- (void)reloadJavaScript
+{
+    _runtime.delegate = nil;
+    _runtime = [[PCARuntime alloc] initWithDelegate:self];
+    
+    CALayer* contentLayer = [self rootLayer];
+    _runtime.layer.frame = contentLayer.bounds;
+    _runtime.layer.autoresizingMask = kCALayerWidthSizable | kCALayerHeightSizable;
+    [contentLayer setSublayers:@[_runtime.layer]];
+    
     [_runtime evaluateScriptAtURL:_javaScriptURL];
     
     // TODO: Log in window
@@ -62,19 +88,7 @@
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
 {
     [super windowControllerDidLoadNib:aController];
-    
-    // Add any code here that needs to be executed once the windowController has loaded the document's window.
-    
-    _runtime = [[PCARuntime alloc] initWithDelegate:self];
-    
-    CALayer* contentLayer = ((NSView*)aController.window.contentView).layer;
-    _runtime.layer.frame = contentLayer.bounds;
-    _runtime.layer.autoresizingMask = kCALayerWidthSizable | kCALayerHeightSizable;
-    [contentLayer addSublayer:_runtime.layer];
-    
-    [self runJavaScript];
-    
-    // Monitor file for changes.
+    [self reloadJavaScript];
 }
 
 static void fsevent_callback(ConstFSEventStreamRef streamRef,
@@ -95,7 +109,7 @@ static void fsevent_callback(ConstFSEventStreamRef streamRef,
     if (needsReload) {
         PCADocument* doc = (__bridge PCADocument*)clientCallBackInfo;
         dispatch_async(dispatch_get_main_queue(), ^{
-            [doc runJavaScript];
+            [doc reloadJavaScript];
         });
     }
 }
